@@ -1,0 +1,364 @@
+body{
+  font-family: 'Poppins';
+  overflow-x: hidden;
+}
+.button-85 {
+  padding: 0.4rem 1rem;
+  background: linear-gradient(145deg, #00ffd1, #00adb5);
+  color: #000;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 255, 209, 0.3);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.carousel-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  padding: 1rem;
+  scroll-snap-type: x mandatory;
+}
+.carousel-card {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  width: 300px;
+  height: 200px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #222;
+}
+.carousel-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.service-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.service-card {
+  background: #222;
+  padding: 1.5rem;
+  border-radius: 12px;
+  width: 220px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.form-style {
+  max-width: 500px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.form-style input,
+.form-style textarea {
+  padding: 0.8rem;
+  background-color: #222;
+  color: #fff;
+  border: 1px solid #333;
+  border-radius: 6px;
+}
+
+/* From Uiverse.io by Smit-Prajapati */ 
+.parent {
+  width: 300px;
+  padding: 20px;
+  perspective: 1000px;
+}
+
+.card {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  /* border-radius: 10px; */
+  border: 3px solid rgb(255, 255, 255);
+  transform-style: preserve-3d;
+  background: linear-gradient(135deg,#0000 18.75%,#f3f3f3 0 31.25%,#0000 0),
+      repeating-linear-gradient(45deg,#f3f3f3 -6.25% 6.25%,#ffffff 0 18.75%);
+  background-size: 60px 60px;
+  background-position: 0 0, 0 0;
+  background-color: #f0f0f0;
+  width: 100%;
+  box-shadow: rgba(142, 142, 142, 0.3) 0px 30px 30px -10px;
+  transition: all 0.5s ease-in-out;
+}
+
+.card:hover {
+  background-position: -100px 100px, -100px 100px;
+  transform: rotate3d(0.5, 1, 0, 30deg);
+}
+
+.content-box {
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   
+  /* align-items: center;        */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  padding: 60px 25px 25px 25px;
+  transition: all 0.5s ease-in-out;
+  transform-style: preserve-3d;
+  position: relative;
+  z-index: 1;
+  border-radius: 12px;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.55); 
+  /* text-align: center; */
+}
+
+.content-box .card-title {
+  display: inline-block;
+  color: white;
+  font-size: 25px;
+  font-weight: 900;
+  transition: all 0.5s ease-in-out;
+  transform: translate3d(0px, 0px, 50px);
+}
+
+.content-box .card-title:hover {
+  transform: translate3d(0px, 0px, 60px);
+}
+
+.content-box .card-content {
+  margin-top: 10px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #f2f2f2;
+  transition: all 0.5s ease-in-out;
+  transform: translate3d(0px, 0px, 30px);
+  text-shadow: #000;
+}
+
+.content-box .card-content:hover {
+  transform: translate3d(0px, 0px, 60px);
+}
+
+.content-box .see-more {
+  cursor: pointer;
+  margin-top: 1rem;
+  display: inline-block;
+  font-weight: 900;
+  font-size: 9px;
+  text-transform: uppercase;
+  color: black;
+  /* border-radius: 5px; */
+  background: white;
+  padding: 0.5rem 0.7rem;
+  transition: all 0.5s ease-in-out;
+  transform: translate3d(0px, 0px, 20px);
+  width: 55px;
+}
+
+.content-box .see-more:hover {
+  transform: translate3d(0px, 0px, 60px);
+}
+
+.content-box .card-title,
+.content-box .card-content,
+.content-box .see-more {
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.9); /* subtle soft glow */
+}
+
+.date-box {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  height: 60px;
+  width: 60px; 
+  background: white;
+  border: 1px solid rgb(26, 40, 45);
+  /* border-radius: 10px; */
+  padding: 10px;
+  transform: translate3d(0px, 0px, 80px);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 17px 10px -10px;
+}
+
+@media (max-width: 768px) {
+  .content-box {
+    min-height: 300px;
+  }
+}
+ 
+.simple-carousel {
+  width: 100%;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  display: flex;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.carousel-track {
+  display: flex;
+  scroll-snap-align: start;
+  gap: 1rem;
+}
+
+.simple-carousel img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 12px;
+  scroll-snap-align: center;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.simple-carousel img:hover {
+  transform: scale(1.03);
+}
+
+.swiper-gl-image {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+}
+
+.swiper-slide-content {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  text-shadow: 0 0 6px rgba(0,0,0,0.7);
+}
+
+.swiper-slide-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+
+.visit-text a {
+  color: inherit;           
+  text-decoration: none;    
+}
+
+.button {
+  --main-color: #00bfff; 
+  --main-bg-color: rgba(0, 191, 255, 0.36);
+  --pattern-color: rgba(0, 191, 255, 0.08);
+
+  filter: hue-rotate(0deg);
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  background: radial-gradient(
+      circle,
+      var(--main-bg-color) 0%,
+      rgba(0, 0, 0, 0) 95%
+    ),
+    linear-gradient(var(--pattern-color) 1px, transparent 1px),
+    linear-gradient(to right, var(--pattern-color) 1px, transparent 1px);
+  background-size:
+    cover,
+    15px 15px,
+    15px 15px;
+  background-position:
+    center center,
+    center center,
+    center center;
+  border-image: radial-gradient(
+      circle,
+      var(--main-color) 0%,
+      rgba(0, 0, 0, 0) 100%
+    )
+    1;
+  border-width: 1px 0 1px 0;
+  color: var(--main-color);
+  padding: 1rem 3rem;
+  font-weight: 700;
+  font-size: 1.5rem;
+  transition: background-size 0.2s ease-in-out;
+}
+
+.button:hover {
+  background-size:
+    cover,
+    10px 10px,
+    10px 10px;
+}
+
+.button:active {
+  filter: hue-rotate(250deg);
+}
+
+.description-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.description {
+  width: 45%;
+  height: auto;
+  background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
+  border-radius: 20px;
+  transition: all 0.3s;
+  padding: 0.1rem;
+  font-family: "Playwrite AU QLD", cursive;
+}
+
+.description:hover {
+  box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.3);
+}
+
+/* Inner content box */
+.description2 {
+  background-color: #1a1a1a;
+  border-radius: 20px;
+  transition: all 0.2s;
+  padding: 1.5rem;
+  color: #fff;
+  font-size: 1rem;
+  line-height: 1.6;
+  width: 100%;
+}
+
+.description2:hover {
+  transform: scale(0.99);
+}
+
+@media screen and (max-width: 768px) {
+  .description-wrapper {
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .description {
+    width: 100% !important;
+    height: 100%; 
+    display: flex;
+    align-items: center;       
+    justify-content: center;   
+    text-align: center;        
+    padding: 1rem;           
+    box-sizing: border-box; 
+  }
+
+  .description2 {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .description2 video {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+  }
+}

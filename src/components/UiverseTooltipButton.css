@@ -1,0 +1,107 @@
+/* --- Layout wrappers --- */
+.tooltip-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inter', sans-serif;
+  margin-top: 40px;          /* push it down if needed */
+}
+
+.tooltip-popup {
+  position: absolute;
+  display: flex;
+  opacity: 0;
+  transform: translateY(-300%) skewY(20deg);
+  transition: all 0.5s ease;
+  pointer-events: none;
+}
+
+.tooltip-wrapper:hover .tooltip-popup {
+  opacity: 1;
+  transform: translateY(-150%) skewY(0deg);
+  transition-delay: 0.5s;
+}
+
+/* --- Bubble --- */
+.tooltip-bubble {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgb(22, 162, 248);       /* lime-200 */
+  padding: 8px 10px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  font-weight: 700;
+  font-size: 0.875rem;
+  color: #fff;            /* zinc-600 */
+}
+
+/* tail */
+.tooltip-tail,
+.tooltip-cover {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  transform: translateX(calc(100% + 2px)) translateY(50%) rotate(45deg);
+  left: 50%;
+}
+
+.tooltip-tail {
+  background: #cff09e;
+  bottom: 0;
+}
+
+.tooltip-cover {
+  background: #fff;
+  opacity: 1;
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.tooltip-wrapper:hover .tooltip-cover {
+  opacity: 0;
+  transform: scale(1.15);
+  transition-delay: 0.7s;
+}
+
+/* --- Icons inside bubble --- */
+.globe {
+  width: 20px;
+  height: 20px;
+  stroke: #fff;
+  fill: none;
+  stroke-width: 1.5;
+}
+
+/* --- Main circular button --- */
+.visit-btn {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, rgb(83, 179, 238), rgb(0, 73, 118));
+  padding: 12px 14px;
+  border-radius: 9999px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: gap 0.3s;
+}
+
+.visit-btn:hover {
+  gap: 8px;
+}
+
+.arrow {
+  width: 20px;
+  height: 20px;
+  fill: #fff;
+}
+
+.visit-text {
+  font-size: 0;
+  transition: font-size 0.3s;
+  font-weight: 700;
+  color: #fff;
+}
+
+.visit-btn:hover .visit-text {
+  font-size: 0.875rem;
+}

@@ -1,0 +1,62 @@
+.social-wrapper {
+  margin-top: 60px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.social-inner {
+  display: flex;
+  gap: 20px;
+}
+
+.social-btn {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  clip-path: url(#squircleClip);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.social-btn:hover {
+  transform: scale(1.1) translateY(-6px);
+  box-shadow: 0px 10px 30px rgba(255, 255, 255, 0.1);
+}
+
+.icon {
+  width: 28px;
+  height: 28px;
+  fill: white;
+}
+
+.social-btn:hover {
+  transform: scale(1.1) translateY(-6px);
+}
+
+/* Brand-specific background gradients */
+.github {
+  background: linear-gradient(to bottom right, #24292e, #1b1f23);
+}
+.linkedin {
+  background: linear-gradient(to bottom right, #0077b5, #004471);
+}
+.youtube {
+  background: linear-gradient(to bottom right, #ff0000, #cc0000);
+}
+.discord {
+  background: linear-gradient(to bottom right, #7289da, #4e5d94);
+}
+
+/* Icon color */
+.icon {
+  width: 28px;
+  height: 28px;
+  fill: white;
+}
